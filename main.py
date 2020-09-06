@@ -40,7 +40,7 @@ X = np.array(list(zip(x1, x2))).reshape(len(x1), 2)
 colors = ['b', 'g', 'r']
 markers = ['o', 'v', 's']
 
-
+#apply k means for 2 to 20 clusters and plot distortions
 distortions = []
 for k in range(2, 20):
     kmeans = KMeans(n_clusters=k).fit(X)
@@ -54,3 +54,4 @@ plt.title('The Elbow Method showing the optimal k')
 plt.show()
 
 #from this plot, determine optimal k
+
